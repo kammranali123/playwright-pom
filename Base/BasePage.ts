@@ -58,10 +58,10 @@ export abstract class BasePage {
     await this.page.waitForLoadState('load');
   }
 
-  // Wait for network to go idle — use after actions that trigger API calls
-  async waitForNetworkIdle(): Promise<void> {
-    await this.page.waitForLoadState('networkidle');
-  }
+  // // Wait for network to go idle — use after actions that trigger API calls
+  // async waitForNetworkIdle(): Promise<void> {
+  //   await this.page.waitForLoadState('networkidle');
+  // }
 
   // Wait for URL to match a pattern — use after form submit or link click
   async waitForUrl(urlPattern: string | RegExp, timeout = 30000): Promise<void> {

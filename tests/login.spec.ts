@@ -1,9 +1,9 @@
-import { test, expect } from "@playwright/test";
-import { LoginPage } from "../pages/LoginPage";
-import { tags } from "../utils/tags";
-import { testData } from "../utils/testData";
+import { test } from '@playwright/test';
+import { LoginPage } from '../pages/LoginPage';
+import { tags } from '../utils/tags';
+import { testData } from '../utils/testData';
 
-test.describe("Login", { tag: tags.E2E }, () => {
+test.describe('Login', { tag: tags.E2E }, () => {
   let loginPage: LoginPage;
 
   test.beforeEach(async ({ page }) => {
@@ -12,7 +12,7 @@ test.describe("Login", { tag: tags.E2E }, () => {
   });
 
   test(
-    "valid login redirects away from login page",
+    'valid login redirects away from login page',
     { tag: [tags.SMOKE, tags.CRITICAL] },
     async ({ page }) => {
       await loginPage.login(
@@ -24,7 +24,7 @@ test.describe("Login", { tag: tags.E2E }, () => {
   );
 
   test(
-    "invalid login shows error",
+    'invalid login shows error',
     { tag: tags.ACCEPTANCE },
     async ({ page }) => {
       await loginPage.login(
