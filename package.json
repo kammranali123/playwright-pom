@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "playwright test",
-    "test:headed": "playwright test --headed",
+    "test:headed": "playwright test --headless=true",
     "report": "playwright show-report",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix"
