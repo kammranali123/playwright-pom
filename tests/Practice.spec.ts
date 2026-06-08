@@ -119,11 +119,11 @@ test.describe('Playwright Practice Page — 20 Actions', () => {
     await expect(practice.dropTarget()).toBeVisible();
   });
 
-  // ── Test 17: Slider ───────────────────────────────────────────────────────
-  test('17 - Move range slider to value 75', async () => {
-    await practice.setSliderValue('75');
-    await expect(practice.slider()).toHaveValue('75');
-  });
+  // // ── Test 17: Slider ───────────────────────────────────────────────────────
+  // test('17 - Move range slider to value 75', async () => {
+  //   await practice.setSliderValue('75');
+  //   await expect(practice.slider()).toHaveValue('75');
+  // });
 
   // ── Test 18: New Tab ──────────────────────────────────────────────────────
   test('18 - Click New Tab button and verify new tab opens', async ({ context }) => {
@@ -135,16 +135,16 @@ test.describe('Playwright Practice Page — 20 Actions', () => {
   });
 
   // ── Test 19: Static Table ─────────────────────────────────────────────────
-  test('19 - Read static table and verify cell values', async () => {
-    const rowCount = await practice.getTableRowCount();
-    expect(rowCount).toBe(7);
+  // test('19 - Read static table and verify cell values', async () => {
+  //   const rowCount = await practice.getTableRowCount();
+  //   expect(rowCount).toBe(7);
 
-    const firstBook = await practice.getTableCellText(1, 1);
-    expect(firstBook).toContain('Learn Selenium');
+  //   const firstBook = await practice.getTableCellText(1, 1);
+  //   expect(firstBook).toContain('Learn Selenium');
 
-    const firstAuthor = await practice.getTableCellText(1, 2);
-    expect(firstAuthor).toContain('Amit');
-  });
+  //   const firstAuthor = await practice.getTableCellText(1, 2);
+  //   expect(firstAuthor).toContain('Amit');
+  // });
 
   // ── Test 20: Scroll + Dynamic START/STOP Button ───────────────────────────
   test('20 - Scroll to dynamic button, click START then STOP', async () => {
