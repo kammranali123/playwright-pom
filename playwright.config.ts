@@ -10,7 +10,7 @@ export default defineConfig({
   workers: process.env.CI ? 2 : undefined,
   use: {
     baseURL: 'https://demo.mealie.io',
-    headless: false,
+    headless: true,
     screenshot: 'only-on-failure',
     video: 'on-first-retry',         // save video on retry
     trace: 'on-first-retry',         // save trace on retry
